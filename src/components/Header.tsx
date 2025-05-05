@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -13,7 +12,7 @@ const Header = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
             <img 
-              src="/lovable-uploads/c0a40596-4ba9-4098-a62e-c7f9c7cb7861.png" 
+              src="/lovable-uploads/logo.png" 
               alt="copy2paste logo" 
               className="h-9 w-auto"
             />
