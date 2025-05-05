@@ -1,0 +1,83 @@
+
+import { ArrowRight, FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const Hero = () => {
+  return (
+    <section className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-24">
+      <div className="container-custom">
+        <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-16">
+          <div className="flex-1 space-y-6">
+            <div className="inline-flex items-center gap-2 bg-copyblue/10 text-copyblue px-4 py-2 rounded-full font-medium text-sm">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-copyblue opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-copyblue"></span>
+              </span>
+              New Chrome Extension
+            </div>
+            
+            <h1 className="heading-xl !leading-tight">
+              Unlock Text from <span className="text-copyblue">Any File</span>, Instantly
+            </h1>
+            
+            <p className="text-lead max-w-2xl">
+              Extract text from PDFs, Word documents, Excel spreadsheets, and more with a simple drag and drop. 
+              No sign-up, no uploads, and no data leaving your browser.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-copyblue hover:bg-copyblue-dark text-white text-base"
+              >
+                <a 
+                  href="https://chrome.google.com/webstore/detail/copy2paste" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <span>Add to Chrome</span>
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </Button>
+              
+              <div className="flex gap-2 items-center">
+                <FileText className="h-5 w-5 text-copyblue" />
+                <span className="font-medium">Works Offline</span>
+                <span className="mx-2 h-1 w-1 rounded-full bg-gray-300"></span>
+                <span className="font-medium">Privacy Focused</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex-1 p-6">
+            <div className="relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-copyblue to-copygreen rounded-lg blur-sm opacity-20"></div>
+              <div className="bg-white shadow-xl rounded-lg p-6 border border-gray-100 relative animate-float">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="bg-copyblue/10 rounded-lg p-4">
+                    <FileText className="h-8 w-8 text-copyblue" />
+                  </div>
+                </div>
+                <div className="border-2 border-dashed border-gray-200 rounded-lg p-8 mb-6 flex flex-col items-center">
+                  <p className="text-gray-500 text-center mb-2">Drag files here or</p>
+                  <Button variant="outline" className="border-copyblue text-copyblue hover:bg-copyblue/5">
+                    Select Files
+                  </Button>
+                </div>
+                <div className="space-y-3">
+                  <div className="h-4 bg-gray-100 rounded-full w-full animate-pulse"></div>
+                  <div className="h-4 bg-gray-100 rounded-full w-3/4 animate-pulse"></div>
+                  <div className="h-4 bg-gray-100 rounded-full w-5/6 animate-pulse"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

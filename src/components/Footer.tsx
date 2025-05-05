@@ -1,0 +1,56 @@
+
+import { Link } from "react-router-dom";
+import { FileText } from "lucide-react";
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="container-custom">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-3">
+            <FileText className="h-8 w-8 text-copyblue" />
+            <span className="font-semibold text-xl">copy2paste</span>
+          </div>
+          
+          <div className="flex flex-wrap gap-x-8 gap-y-4 justify-center">
+            <Link to="/" className="hover:text-copyblue transition-colors">
+              Home
+            </Link>
+            <Link to="/privacy" className="hover:text-copyblue transition-colors">
+              Privacy Policy
+            </Link>
+            <a 
+              href="https://chrome.google.com/webstore/detail/copy2paste" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-copyblue transition-colors"
+            >
+              Chrome Web Store
+            </a>
+            <a 
+              href="mailto:contact@copy2paste.com" 
+              className="hover:text-copyblue transition-colors"
+            >
+              Contact
+            </a>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400 text-center">
+          <div className="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <span>Works Offline</span>
+            <span>•</span>
+            <span>Privacy Focused</span>
+            <span>•</span>
+            <span>No Sign-up Required</span>
+          </div>
+          <p>&copy; {currentYear} copy2paste. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
