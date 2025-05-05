@@ -1,73 +1,64 @@
-# Welcome to your Lovable project
+# copy2paste
 
-## Project info
+![copy2paste logo](/public/lovable-uploads/logo.png)
 
-**URL**: https://lovable.dev/projects/552da8f0-99f1-41b4-ada0-bf421e136b73
+## About
 
-## How can I edit this code?
+copy2paste is a powerful Chrome extension that allows you to extract text from various file formats instantly. The extension works locally in your browser, ensuring your data never leaves your device.
 
-There are several ways of editing your application.
+**Live Website**: [https://copy2paste.web.app/](https://copy2paste.web.app/)
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/552da8f0-99f1-41b4-ada0-bf421e136b73) and start prompting.
+- Extract text from PDFs, Word documents, Excel spreadsheets, and more
+- Simple drag and drop interface
+- Works completely offline
+- Privacy-focused with local processing
+- No sign-up required
+- Free to use
 
-Changes made via Lovable will be committed automatically to this repo.
+## Technology Stack
 
-**Use your preferred IDE**
+This website is built with:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui components
+- Firebase Hosting
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Local Development
 
-Follow these steps:
+To run this project locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd copy2paste-website
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The website is deployed on Firebase Hosting. To deploy updates:
 
-**Use GitHub Codespaces**
+1. Install Firebase CLI: `npm install -g firebase-tools`
+2. Login to Firebase: `firebase login`
+3. Build the project: `npm run build`
+4. Deploy to Firebase: `firebase deploy`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Contact
 
-## What technologies are used for this project?
+For questions or feedback, please reach out to [atm1504.in@gmail.com](mailto:atm1504.in@gmail.com)
 
-This project is built with:
+## License
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/552da8f0-99f1-41b4-ada0-bf421e136b73) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is made with ❤️ by [atm1504](https://atm1504.in)
