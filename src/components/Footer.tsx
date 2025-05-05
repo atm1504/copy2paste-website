@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { FileText, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +10,11 @@ const Footer = () => {
       <div className="container-custom">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
-            <FileText className="h-8 w-8 text-copyblue" />
+            <img 
+              src="/lovable-uploads/c0a40596-4ba9-4098-a62e-c7f9c7cb7861.png" 
+              alt="copy2paste logo" 
+              className="h-8 w-auto"
+            />
             <span className="font-semibold text-xl">copy2paste</span>
           </div>
           

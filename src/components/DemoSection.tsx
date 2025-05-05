@@ -1,7 +1,30 @@
 
-import { Play } from "lucide-react";
+import { useState } from "react";
+import { Play, X } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const DemoSection = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  
+  const screenshots = [
+    {
+      src: "/lovable-uploads/2426fd48-8e8f-4a85-9703-a0437c6196d5.png",
+      alt: "copy2paste interface - drag and drop area"
+    },
+    {
+      src: "/lovable-uploads/c0a40596-4ba9-4098-a62e-c7f9c7cb7861.png",
+      alt: "copy2paste interface - empty state"
+    },
+    {
+      src: "/lovable-uploads/8ba2ebd9-deb7-4aa3-ab11-9c38df28f477.png",
+      alt: "copy2paste interface - file processing"
+    },
+    {
+      src: "/lovable-uploads/7a719957-e522-4d02-badf-9b871790943e.png",
+      alt: "copy2paste interface with files"
+    }
+  ];
+
   return (
     <section className="section bg-white">
       <div className="container-custom">
@@ -16,27 +39,19 @@ const DemoSection = () => {
           {/* Screenshots Gallery */}
           <div className="flex-1">
             <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <img 
-                  src="/lovable-uploads/9eb0d9e5-32d0-44cb-a504-383089249e55.png" 
-                  alt="copy2paste interface - drag and drop area" 
-                  className="w-full h-auto"
-                />
-              </div>
-              <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <img 
-                  src="/lovable-uploads/980e197a-bf1b-450b-9ac1-86d6c506886b.png" 
-                  alt="copy2paste interface with files" 
-                  className="w-full h-auto"
-                />
-              </div>
-              <div className="col-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow mt-4">
-                <img 
-                  src="/lovable-uploads/1f56d854-5343-4ad3-a746-2f020b1b8924.png" 
-                  alt="copy2paste interface with dark mode" 
-                  className="w-full h-auto"
-                />
-              </div>
+              {screenshots.map((img, index) => (
+                <div 
+                  key={index}
+                  className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+                  onClick={() => setSelectedImage(img.src)}
+                >
+                  <img 
+                    src={img.src} 
+                    alt={img.alt} 
+                    className="w-full h-auto"
+                  />
+                </div>
+              ))}
             </div>
           </div>
           
@@ -56,6 +71,25 @@ const DemoSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Image Modal */}
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-4xl p-1 bg-white rounded-lg">
+          <button 
+            onClick={() => setSelectedImage(null)}
+            className="absolute right-2 top-2 rounded-full bg-white/80 p-1 z-10"
+          >
+            <X className="h-5 w-5" />
+          </button>
+          {selectedImage && (
+            <img 
+              src={selectedImage} 
+              alt="copy2paste screenshot enlarged" 
+              className="w-full h-auto rounded"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

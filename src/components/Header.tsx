@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { FileText, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,7 +12,11 @@ const Header = () => {
       <div className="container-custom py-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
-            <FileText className="h-8 w-8 text-copyblue" />
+            <img 
+              src="/lovable-uploads/c0a40596-4ba9-4098-a62e-c7f9c7cb7861.png" 
+              alt="copy2paste logo" 
+              className="h-9 w-auto"
+            />
             <span className="font-semibold text-xl">copy2paste</span>
           </Link>
 
