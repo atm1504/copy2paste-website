@@ -51,26 +51,22 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex-1 p-6">
+          <div className="flex-1">
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-copyblue to-copygreen rounded-lg blur-sm opacity-20"></div>
-              <div className="bg-white shadow-xl rounded-lg p-6 border border-gray-100 relative animate-float">
-                <div className="flex items-center justify-center mb-6">
-                  <div className="bg-copyblue/10 rounded-lg p-4">
-                    <FileText className="h-8 w-8 text-copyblue" />
-                  </div>
-                </div>
-                <div className="border-2 border-dashed border-gray-200 rounded-lg p-8 mb-6 flex flex-col items-center">
-                  <p className="text-gray-500 text-center mb-2">Drag files here or</p>
-                  <Button variant="outline" className="border-copyblue text-copyblue hover:bg-copyblue/5">
-                    Select Files
-                  </Button>
-                </div>
-                <div className="space-y-3">
-                  <div className="h-4 bg-gray-100 rounded-full w-full animate-pulse"></div>
-                  <div className="h-4 bg-gray-100 rounded-full w-3/4 animate-pulse"></div>
-                  <div className="h-4 bg-gray-100 rounded-full w-5/6 animate-pulse"></div>
-                </div>
+              <div className="bg-white shadow-xl rounded-lg p-3 border border-gray-100 relative">
+                <img 
+                  src="/lovable-uploads/04e28f48-3d03-45c0-9e44-980b00a97e3e.png" 
+                  alt="copy2paste interface" 
+                  className="w-full h-auto rounded-md"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-20 h-20">
+                <img 
+                  src="/lovable-uploads/a36bc944-4b40-4201-a5a7-a877af810883.png" 
+                  alt="copy2paste logo" 
+                  className="w-full h-auto"
+                />
               </div>
             </div>
           </div>

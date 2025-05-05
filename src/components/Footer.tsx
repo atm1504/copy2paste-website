@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { FileText } from "lucide-react";
+import { FileText, Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400 text-center">
+        <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400">
           <div className="mb-3 flex flex-wrap justify-center gap-x-6 gap-y-2">
             <span>Works Offline</span>
             <span>•</span>
@@ -46,7 +46,22 @@ const Footer = () => {
             <span>•</span>
             <span>No Sign-up Required</span>
           </div>
-          <p>&copy; {currentYear} copy2paste. All rights reserved.</p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-3">
+            <p>&copy; {currentYear} copy2paste. All rights reserved.</p>
+            <div className="hidden sm:block">|</div>
+            <p className="flex items-center gap-1">
+              Made with <Heart className="h-4 w-4 text-red-500 fill-red-500" /> by 
+              <a 
+                href="https://atm1504.in" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-copyblue hover:underline"
+              >
+                atm1504
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
